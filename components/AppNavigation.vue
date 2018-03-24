@@ -1,15 +1,13 @@
 <template>
   <nav>
-    <h2>Simple Transition Group For Layout {{ page }}</h2>
-    <p>{{ $store.state.page }}</p>
+    <h2>Simple Transition Group For Layout: {{ page }}</h2>
     <ul>
       <nuxt-link exact to="/"><li>index</li></nuxt-link>
       <nuxt-link to="/about"><li>about</li></nuxt-link>
       <nuxt-link to="/users"><li>users</li></nuxt-link>
     </ul>
-    <button @click="changeIt">Change</button>
     <br>
-    <svg :class="{ active: changed }" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 447 442">
+    <svg :class="{ 'active' : (page === 'about') }" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 447 442">
       <transition-group name="list" tag="g">
         <rect class="items rect" ref="rect" key="rect" width="171" height="171"/>
         <circle class="items circ" key="circ" id="profile" cx="382" cy="203" r="65"/>
@@ -28,16 +26,6 @@
 import { mapState } from 'vuex'
 
 export default {
-  data() {
-    return {
-      changed: false
-    }
-  },
-  methods: {
-    changeIt() {
-      this.changed = !this.changed
-    }
-  },
   computed: mapState(['page'])
 }
 </script>
