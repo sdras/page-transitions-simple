@@ -17,6 +17,9 @@ module.exports = {
       }
     ]
   },
+  router: {
+    middleware: 'pages'
+  },
   /*
   ** Customize the progress bar color
   */
