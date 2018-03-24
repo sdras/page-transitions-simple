@@ -73,6 +73,8 @@ jspm_packages
 
 # Nuxt build
 .nuxt
+# but not this file
+!.nuxt/nuxt-child.js
 
 # Nuxt generate
 dist

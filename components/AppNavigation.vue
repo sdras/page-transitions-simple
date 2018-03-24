@@ -2,6 +2,11 @@
   <nav>
     <h2>Simple Transition Group For Layout {{ page }}</h2>
     <p>{{ $store.state.page }}</p>
+    <ul>
+      <nuxt-link exact to="/"><li>index</li></nuxt-link>
+      <nuxt-link to="/about"><li>about</li></nuxt-link>
+      <nuxt-link to="/users"><li>users</li></nuxt-link>
+    </ul>
     <button @click="changeIt">Change</button>
     <br>
     <svg :class="{ active: changed }" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 447 442">
@@ -38,6 +43,24 @@ export default {
 </script>
 
 <style scoped lang="scss">
+ul {
+  list-style: none;
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  a,
+  a:active,
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.nuxt-link-active {
+  font-weight: bold;
+}
+
 .items,
 .list-move {
   transition: all 0.4s ease;
