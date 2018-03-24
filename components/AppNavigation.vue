@@ -1,6 +1,7 @@
 <template>
   <nav>
-    <h2>Simple Transition Group For Layout</h2>
+    <h2>Simple Transition Group For Layout {{ page }}</h2>
+    <p>{{ $store.state.page }}</p>
     <button @click="changeIt">Change</button>
     <br>
     <svg :class="{ active: changed }" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 447 442">
@@ -19,6 +20,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   data() {
     return {
@@ -29,7 +32,8 @@ export default {
     changeIt() {
       this.changed = !this.changed
     }
-  }
+  },
+  computed: mapState(['page'])
 }
 </script>
 
