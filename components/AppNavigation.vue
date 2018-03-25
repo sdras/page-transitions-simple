@@ -7,7 +7,7 @@
       <nuxt-link to="/users"><li>users</li></nuxt-link>
     </ul>
     <br>
-    <svg :class="{ 'active' : (page === 'about') }" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 447 442">
+    <svg :class="{ 'active' : (page === 'about') }" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 447 442">
       <transition-group name="list" tag="g">
         <rect class="items rect" ref="rect" key="rect" width="171" height="171"/>
         <circle class="items circ" key="circ" id="profile" cx="382" cy="203" r="65"/>
