@@ -69,16 +69,16 @@ svg {
 .active {
   fill: #e63946;
   .rect {
-    transform: translateY(30px);
+    transform: translate3d(0, 30px, 0);
   }
   .circ {
-    transform: translateX(30px) scale(0.5);
+    transform: translate3d(30px, 0, 0) scale(0.5);
   }
   .text {
     transform: rotate(90deg) scaleX(0.08) translate3d(-300px, -35px, 0);
   }
   .footer {
-    transform: translateX(100px);
+    transform: translate3d(100px, 0, 0);
   }
 }
 </style>
